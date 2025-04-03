@@ -34,10 +34,14 @@
             .next { right: 10px; }
             .nav-buttons {
                 display: flex;
+                flex-wrap: wrap;
                 gap: 10px;
+                justify-content: center;
             }
             /*styling for the navigation buttons*/
             .nav-buttons button {
+                fex: 1 1 auto;
+                min-width: 120px;
                 background-color: #505250;
                 color: white;
                 border: none;
@@ -45,6 +49,7 @@
                 cursor: pointer;
                 font-size: 16px;
                 border-radius: 5px;
+                text-align: center;
             }
             /*hover effect for navigation buttons*/
             .nav-buttons:hover {
