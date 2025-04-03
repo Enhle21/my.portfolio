@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Page 1 - Mbali's Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            /*styling for navigation buttons*/
+            .nav-buttons button {
+                background-color: #505250;
+                color: white;
+                border: none;
+                padding: 10px 15px;
+                cursor: pointer;
+                font-size: 16px;
+                border-radius: 5px;
+            }
+            /*Hover effect for navigation buttons*/
+            .nav-buttons button:hover {
+                background-color: #45a049;
+            }
+        </style>
+    </head>
+    <body>
+        <!--Header section for the name and navigation buttons-->
+        <header>
+            <h1>Palesa Mbali Tshabangu</h1>
+            <div class="speech-bubble">
+                <nav>
+                    <div class="nav-buttons">
+                        <button onclick="location.href='index.html'">Back To WP</button>
+                        <button onclick="showSection('about')">About Me</button>
+                        <button onclick="showSection('education')">Education</button>
+                        <button onclick="showSection('skills')">Skills</button>
+                        <button onclick="location.href='index2.html'">Next Page</button>
+                    </div>
+                </nav>
+                </div>   
+            </header>
+        <!--About Me Section-->
+            <section id="about" class="content-section">
+                <h2>About Me</h2>
+                <img src="profile.jpg.jpg" alt="Mbali Tshabangu" class="Profile-img">
+                <div class="speech-bubble">
+                    <p>I am a goal-driven IT Professional from South Africa with expertise in Networking, Computer Programming, Web Development, and Technical Support.
+                    Currently, I am a student at PowerLearnProject, pursuing a Software Development course. I am a hardworking, fun, and kind individual who is always
+                    looking for opportunities to grow. I have represented Gauteng Province in the WorldSkills Competition showcasing my technical skills and problem-solving
+                    abilities in the IT Network Systems Administration trait.</p>
+                </div>
+            </section>
+        <!--Education Section-->
+            <section id="education" class="content-section">
+                <div class="speech-bubble">
+                <h2>Education</h2>
+                <ul>
+                    <li><strong>PowerLearnProject</strong> -   Software Development Course (Ongoing)</li>
+                    <li><strong>Sedibeng TVET College</strong> -   Information Technology and Computer Sciences National Certificate Vocational</li>
+                    <li><strong>Cisco Networking Academy</strong> -   Networking Basics, Introduction to Networking, Introduction to CyberSecurity</li>
+                </ul>
+                </div>
+            </section> 
+        <!--Skills section-->       
+            <section id="skills" class="content-section">
+                <div class="speech-bubble">
+                <h2>Skills</h2>
+                <ul>
+                    <li>IT Networking & Systems Administration</li>
+                    <li>Web Development (HTML & CSS)</li>
+                    <li>Project Management</li>
+                    <li>Systems Analysis and Design</li>
+                    <li>Trainee Programming</li>
+                    <li>Data Capturing</li>
+                    <li>Configuring Client Server Environment</li>
+                    <li>Configuring Networking Environment</li>
+                    <li>Virtual Machine, VMWare Workstation operation</li>
+                    <li>Installing, Configuring and maintaining software and hardware systems</li>
+                    <li>Technical Support</li>
+                    <li>Test and Troubleshoot technical devices</li>
+                    <li>Hardware and Software Support</li>
+                    <li>Problem-solving & Analytical Thinking</li>
+                </ul>
+            </div>
+            </section> 
+        <!--Sript to manage section visibility-->
+            <script>
+                function showSection(sectionId) {
+                    // Hide all sections
+                    document.querySelectorAll('.content-section').forEach(section => {
+                        section.style.display = 'none';
+                    });
+                    //show only the selected section
+                    document.getElementById('about').style.display = 'none'; // Hide About section unless selected
+                    document.getElementById(sectionId).style.display = 'block';
+                }
+                // Set the default section to be 'About Me' when the page loads
+                window.onload = function() {
+                    showSection('about');
+                };
+            </script>
+    </body>
+</html>

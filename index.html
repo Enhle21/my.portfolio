@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palesa Mbali Tshabangu - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Styling */
+        body {
+            background-color: #4B0082;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        /* Speech Bubble for Welcome Message */
+        .welcome-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+            padding: 20px;
+        }
+
+        .welcome {
+            font-size: 2.5em;
+            font-weight: bolder;
+            font-style: italic;
+            max-width: 80%;
+            padding: 20px;
+            background: white;
+            color: #4B0082;
+            border-radius: 20px;
+            position: relative;
+            text-align: center;
+            box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.3);
+            animation: fadeIn 2s ease-in-out;
+            overflow: hidden;
+            border-right: 3px solid #4B0082;
+            white-space: normal; /* Allows text wrapping */
+            word-wrap: break-word; /* Ensures long words break correctly */
+        }
+
+        /* Speech Bubble Tail */
+        .welcome::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 20px;
+            border-style: solid;
+            border-color: white transparent transparent transparent;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        .typing-effect {
+            display: inline-block;
+            overflow: hidden;
+            animation: typing 3s steps(40, end) forwards, blink 0.7s infinite;
+        }
+
+        /* Bubble Button */
+        .bubble-button {
+            position: center;
+            bottom: 10vh;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: black;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-size: 1.2em;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            opacity: 0;
+            animation: fadeIn 4s ease-in-out forwards;
+        }
+
+        .bubble-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .welcome {
+                font-size: 1.8em;
+                max-width: 90%;
+                white-space: normal; /* Ensures text wraps on small screens */
+                word-wrap: break-word;
+            }
+            .bubble-button {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Welcome Message in Speech Bubble -->
+    <div class="welcome-container">
+        <div class="welcome">
+            <span class="typing-effect" id="welcome-text">WELCOME TO PALESA MBALI TSHABANGU'S PORTFOLIO</span>
+        </div>
+    </div>
+
+    <!-- Button to Redirect to Portfolio -->
+    <button class="bubble-button" onclick="location.href='index1.html'">Click Here to View Portfolio</button>
+
+    <script>
+        // Initialize AOS animations
+        AOS.init();
+    </script>
+</body>
+</html>
+
